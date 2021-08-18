@@ -1,0 +1,36 @@
+#WheelButtonPage {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+input#spin {
+    border: 5px solid red ; 
+     padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;    
+}
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(96, 182, 10);
+}
+
+button {
+    border: none;
+    background-color: rgb(4, 250, 107);
+    padding: 10px;
+    margin: 10px;
+}
+
+#navBar {
+    display: flex;
+    justify-content: center;
+    
+
+}

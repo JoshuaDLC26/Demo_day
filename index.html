@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin 2 Save!</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAZeyAfrqLndjaEsM5Eponi4KSKYsUfCyo",
+    authDomain: "demoday-1a62a.firebaseapp.com",
+    projectId: "demoday-1a62a",
+    storageBucket: "demoday-1a62a.appspot.com",
+    messagingSenderId: "171244819496",
+    appId: "1:171244819496:web:0b4fa85918d39f0bcd111d",
+    measurementId: "G-7RJ3HN19RM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Spin 2 Save</h1>
+
+    <div id="navBar">
+        
+    <button id ="HomePage"> Home </button> 
+        
+        <a href="https://www.investopedia.com/the-racial-gap-in-financial-literacy-5119258">The Race Gap in Financial Literacy</a>
+
+        <a href="https://www.thebalance.com/best-banks-for-savings-accounts-4160384"> Best Starter Savings Accounts</a>
+
+        <a href="https://myscholly.com/financial-literacy/"> Beginners Guide to Financial Literacy</a>
+
+    <button id= "wheelButton"> Wheel</button> 
+    <button id="log">Savings Log</button>
+    </div>
+
+    <div id="WheelButtonPage">
+        <input type="button" value="spin" style="float:left;" id='spin' />
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+    </div>
+    
+    <div class="allMessages">
+        
+    </div>
+
+    <div class="userContainer">
+        <form>
+            <div class="inputContainer">
+                <div class="singleInput">
+                    <label for="SavedAmount">Amount Saved:</label>
+                    <input id="SavedAmount" type="text">
+                </div>
+                <div class="singleInput">
+                    <label for="Date">Date:</label>
+                    <input id="Date" type="text">
+                </div>
+            </div>
+            <button id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
