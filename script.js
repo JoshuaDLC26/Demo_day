@@ -9,6 +9,7 @@ userInfo[0].style.display= "none"
 let SavedAmountElement = document.querySelector('#SavedAmount')
 let DateElement = document.querySelector('#Date')
 let Submit = document.querySelector('#submitButton')
+let Logo = document.querySelector("#logo")
 
 
 var options = ["$100", "$10", "$25", "$50", "$30", "$25", "$1", "$20", "$45", "$50", "$5", "$20", "$75", "$30", "$3", "$100", "$15", "$99"];
@@ -143,19 +144,27 @@ drawRouletteWheel();
 
 wheelButton.onclick = function(event){
   event.preventDefault(); 
-  Wheel.style.display= "block"
+  Wheel.style.display= "block";
+  userInfo[0].style.display= "none";
+  Logo.style.display = "none";
   
   }
 
 HomePageButton.onclick = function(event) {
   event.preventDefault();
-  Wheel.style.display = "none"
-  userInfo[0].style.display="none"
+  Wheel.style.display = "none";
+  userInfo[0].style.display="none";
+  Logo.style.display = "block";
+  
+
 }
 
 logButton.onclick = function(event) {
   event.preventDefault();
-  userInfo[0].style.display= "block"
+  userInfo[0].style.display= "block";
+  Wheel.style.display= "none";
+  Logo.style.display = "none";
+
 }
 
 Submit.onclick = function updateDB(event){
@@ -164,7 +173,7 @@ Submit.onclick = function updateDB(event){
   let date         =  DateElement.value;
   SavedAmountElement.value = "";
   DateElement.value  = "";
-  console.log("Amount Saved:" + amountSaved + " : " + date);
+  console.log(amountSaved + " : " + date);
   // Update database here
   let value = {
       AMOUNTSAVED: amountSaved, 
@@ -180,7 +189,7 @@ function addToLog(rowData){
   let board = document.querySelector(".allMessages");
   let message = document.createElement("p");
 
-  message.innerHTML = "Amount Saved: " + row.AMOUNTSAVED +"<br>" + "Date:" + row.DATE;
+  message.innerHTML = "Amount Saved:" + row.AMOUNTSAVED +"<br>" + "Date:" + row.DATE;
   board.appendChild(message);
   
   SavedAmountElement.value= "";
